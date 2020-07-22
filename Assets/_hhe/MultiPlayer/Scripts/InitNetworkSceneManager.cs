@@ -37,7 +37,7 @@ public class InitNetworkSceneManager : MonoBehaviourPunCallbacks
     {
         //if(PhotonNetwork.NickName == "")
         //{
-        PhotonNetwork.NickName = "Hhe " + Random.Range(1, 10);
+        PhotonNetwork.NickName = "Hhe_" + Random.Range(1, 10);
         //}
         Debug.Log(PhotonNetwork.NickName + " Connected to photon server.");
         JoinRandomRoom();

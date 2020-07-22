@@ -12,8 +12,8 @@ public class ARFPlayerSetup : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        GameObject go = GameObject.Find("[ARF]");
-        Camera[]  _arfCameras = go.GetComponentsInChildren<Camera>();
+        //GameObject go = GameObject.Find("[ARF]");
+        //Camera[]  _arfCameras = go.GetComponentsInChildren<Camera>();
         if (photonView.IsMine)
         {
             transform.GetComponent<ARFMovementController>().enabled = true;
