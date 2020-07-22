@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
@@ -8,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameSceneManager : MonoBehaviourPunCallbacks
 {
     [SerializeField]
-    private GameObject playerPrefab;
+    private GameObject playerPrefab;  // Must be in Resources folder
 
     public static GameSceneManager instance;
     private void Awake()
@@ -29,7 +27,7 @@ public class GameSceneManager : MonoBehaviourPunCallbacks
         {
             if (playerPrefab != null)
             {
-                PhotonNetwork.Instantiate(playerPrefab.name, Vector3.zero, Quaternion.identity);
+                PhotonNetwork.Instantiate(playerPrefab.name, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
             }
         }
     }
